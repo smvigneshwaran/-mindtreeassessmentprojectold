@@ -1,0 +1,33 @@
+<sly data-sly-test.author="${wcmmode.edit}"> Edit ${component.title} Component </sly>
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call="${clientlib.css @ categories='productDetailsClientLibs'}"></sly>
+</sly>
+
+<sly data-sly-use.productDetailModel="mindtreeAssessmentProject.core.models.ProductDetailModel">
+   
+    <main class="container">
+        
+        <!-- Left Column / Headphones Image -->
+        <div class="left-column">
+            <img data-image="red" class="active" src="${productDetailModel.productImage}" alt="" />
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <!-- Product Description -->
+            <div class="product-description">
+            	<span>Product SKU / ${productDetailModel.productId}</span>
+                <h3>Category / ${productDetailModel.subcategoryName}</h3>
+                <h1>${productDetailModel.productTitle}</h1>
+                <p>${productDetailModel.productDescription}</p>
+            </div>
+
+            <!-- Product Pricing -->
+            <div class="product-price">
+            	<span>${productDetailModel.productPrice}</span> 
+            	<a href="#" class="cart-btn">Add to cart</a>
+            </div>
+        </div>
+    </main>
+</sly>

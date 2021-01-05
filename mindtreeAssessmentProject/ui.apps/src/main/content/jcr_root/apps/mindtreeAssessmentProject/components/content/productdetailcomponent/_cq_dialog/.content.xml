@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Products Detail Authoring Dialog"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                  <tabs
+	                jcr:primaryType="nt:unstructured"
+	                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+	                maximized="{Boolean}true">
+	                <items jcr:primaryType="nt:unstructured">  
+		                 <productConfigs
+	                        jcr:primaryType="nt:unstructured"
+	                        jcr:title="Product Configs"
+	                        sling:resourceType="granite/ui/components/coral/foundation/container"
+	                        margin="{Boolean}true"> 
+	                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+		                        <items jcr:primaryType="nt:unstructured">
+		                            <columns
+		                                jcr:primaryType="nt:unstructured"
+		                                sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns">
+		                                <items jcr:primaryType="nt:unstructured">
+		                                    <column
+		                                        jcr:primaryType="nt:unstructured"
+		                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+		                                        <items jcr:primaryType="nt:unstructured"> 
+								                    <productId
+								                        jcr:primaryType="nt:unstructured"
+								                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								                        fieldDescription="To author product id"
+								                        fieldLabel="Product Id"
+								                        required="{Boolean}true"
+								                        name="./productId"/>
+								                     <productTitle
+								                        jcr:primaryType="nt:unstructured"
+								                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								                        fieldDescription="To author product title"
+								                        fieldLabel="Product Title"
+								                        required="{Boolean}true"
+								                        name="./productTitle"/>
+								                    <productImage
+								                        jcr:primaryType="nt:unstructured"
+								                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								                        fieldDescription="To author product Image"
+								                        fieldLabel="Product Image"
+								                        required="{Boolean}true"
+								                        name="./productImage"/>
+								                     <productDescription
+								                        jcr:primaryType="nt:unstructured"
+								                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+								                        fieldDescription="To author product Description"
+								                        fieldLabel="Product Description"
+								                        required="{Boolean}true"
+								                        useFixedInlineToolbar="{Boolean}true"
+								                        name="./productDescription"/>
+								                     <productPrice
+								                        jcr:primaryType="nt:unstructured"
+								                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								                        fieldDescription="To author product Price"
+								                        fieldLabel="Product Price"
+								                        required="{Boolean}true"
+								                        name="./productPrice"/>
+								                     <subcategoryName
+								                        jcr:primaryType="nt:unstructured"
+								                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+								                        fieldDescription="To author product Subcategory"
+								                        fieldLabel="Product Subcategory"
+								                        required="{Boolean}true"
+								                        name="./subcategoryName"/>
+								               </items>
+								           </column>
+								        </items>
+								     </columns>
+								 </items>
+						     </productConfigs>
+		               </items>
+		            </tabs>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
